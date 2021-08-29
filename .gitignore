@@ -1,0 +1,7 @@
+env/
+migrations/
+presentations/
+__pycache__/
+aws-secret-envs.txt
+*.docx
+*.tmp
