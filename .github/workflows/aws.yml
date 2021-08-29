@@ -73,7 +73,7 @@ jobs:
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
-        task-definition: aws-task-definition.json
+        task-definition: task-definition.json
         container-name: flask_app
         image: ${{ steps.build-image.outputs.image }}
 
@@ -81,6 +81,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: ek
+        service: ek-service
         cluster: ek
         wait-for-service-stability: true

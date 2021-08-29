@@ -9,7 +9,7 @@
       "entryPoint": null,
       "portMappings": [
         {
-          "hostPort": 0,
+          "hostPort": 80,
           "protocol": "tcp",
           "containerPort": 5000
         }
@@ -46,17 +46,18 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "aws-ecs-demo-ecr"
+      "name": "flask_app"
     }
   ],
   "placementConstraints": [],
   "memory": null,
   "taskRoleArn": "arn:aws:iam::060948023174:role/ecsTaskExecutionRole",
   "compatibilities": [
+    "EXTERNAL",
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:060948023174:task-definition/ek:1",
-  "family": "aws-ecs-demo-task-definition",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:060948023174:task-definition/ek-task:2",
+  "family": "ek-task",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -89,7 +90,7 @@
   ],
   "networkMode": null,
   "cpu": null,
-  "revision": 1,
+  "revision": 2,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
